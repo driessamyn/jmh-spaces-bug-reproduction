@@ -1,0 +1,1 @@
+rootProject.name = "jmh-spaces-bug-reproduction"
