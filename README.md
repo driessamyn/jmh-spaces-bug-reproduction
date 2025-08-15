@@ -34,6 +34,11 @@ java -jar build/libs/jmh-spaces-bug-reproduction-jmh.jar \
   -jvmArgs "-javaagent:/tmp/agent with spaces/dummy.jar"
 ```
 
+```shell
+java -jar build/libs/jmh-spaces-bug-reproduction-jmh.jar \
+  -jvmArgs "-javaagent:/tmp/agent\ with\ spaces/dummy.jar"
+```
+
 **Expected**: JMH should pass the full agent path to the JVM  
 **Actual**: JMH incorrectly splits the argument at the space, causing JVM error
 
